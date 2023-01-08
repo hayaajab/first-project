@@ -17,10 +17,10 @@ fun main() {
     doto.add_task(task2)
     doto.add_task(task3)
     doto.add_task(task4)
-    doto.show()
-    doto.remove_task(task3)
-    doto.show()
-    doto.print_id(2)
+    // doto.show()
+    // doto.remove_task(task3)
+    //doto.show()
+    //doto.print_id(2)
     doto.change_task(task1)
 
 
@@ -52,7 +52,7 @@ class Todo{
 
 
 
-            }
+    }
 
     fun add_task(task: Task){
         taskes.add(task)
@@ -61,15 +61,20 @@ class Todo{
         taskes.remove(task)
     }
     fun change_task(task: Task){
+        println(task)
         for (i in taskes) {
-            task.isCompleted =! task.isCompleted
-            println(task)
-        break}
+            when(i.isCompleted){
+                true -> task.isCompleted = false
+                false -> task.isCompleted = true
+
+            }
+        }
+        println(task)
 
 
     }
 
-    }
+}
 
 
 
