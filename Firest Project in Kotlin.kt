@@ -20,7 +20,7 @@ fun main() {
     doto.show()
     doto.remove_task(task3)
     doto.show()
-    doto.print_id(1)
+    doto.print_id(2)
     doto.change_task(task1)
 
 
@@ -43,19 +43,16 @@ class Todo{
     }
     fun print_id(id_number: Int){
         for (i in taskes){
-            if (id_number == i.id){
+            if (id_number == i.id) {
                 println(i)
-                return}
-
-            else println("Not found ")
+                return
+            }
 
         }
 
 
 
             }
-
-
 
     fun add_task(task: Task){
         taskes.add(task)
@@ -66,7 +63,8 @@ class Todo{
     fun change_task(task: Task){
         for (i in taskes) {
             task.isCompleted =! task.isCompleted
-            println(i)}
+            println(task)
+        break}
 
 
     }
